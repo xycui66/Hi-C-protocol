@@ -1,24 +1,24 @@
 # The 3D genome profiling of murine long term hematopoietic stem cells (LT-HSCs)
 * This repository contains code from data analysis of Hi-C.
-# Code description
+## Code description
 1.HicPro.md | From fastq to contact matrix\
 Code contains functions for preprocessing and alignment steps of HiC dataset.\
 2.Compartment.md|Code contains functions for\
 3.TAD.md\
 4.Loop.md\
 5.Probability.md\
-6.Visualization.md\
-# 目前主流三维基因组测序技术
+6.Visualization.md
+## 目前主流三维基因组测序技术
 ![本地图片](./pics/ChromosomeConformationTechnologies.png)
 + C技术\
 **3C(一对一)**：基因组捕获技术(Chromosome conformation capture，3C)是最早研究三维基因组的技术,需要提前知道互相作用区域，才能量化口一对基因组基因座之间的互相作用。\
 **4C(一对多)**：染色体构象捕获芯片(Chromosome conformation capture-on-chip，4C)，可以捕获一个基因区域其他区域间的互相作用。该技术不需要知道作用区域的先验知识就可以使用。\
 **5C(多对多)**：染色体构象捕获碳拷贝(Chromosome conformation capture carbon园 copy，5C)，可以检测某段区域内所有的互作，但是该区域一般<1 Mb。覆盖度的问题也就造成该技术不适用于全基因组测序。\
-**Hi-C(全部互作)**：高通量基因组捕获技术，基本解决了上述技术的缺点，可以实现全基因组覆盖检测全部未知互作区域。\
+**Hi-C(全部互作)**：高通量基因组捕获技术，基本解决了上述技术的缺点，可以实现全基因组覆盖检测全部未知互作区域。
 + 基于免疫沉淀技术\
 **ChlP-loop**：该技术将 3C 与 ChlP-seg 结合，可以检测目的蛋白质介导的两个目的基因区域互作。\
 **ChIA-PET**：该技术将 HiC 与 ChIP-seg 结合，可以检测目的蛋白质的所有互相作用。
-# Hic技术的大致流程
+## HiC技术的大致流程
 Hi-C是高通量染色体构象捕获（High-throughput Chromosome Conformation Capture, Hi-C）技术的简称，通过高通量测序检测基因组不同位置可能存在的空间互作（contacts），研究全基因组范围内整个染色质DNA在空间位置上的关系。\
 由Job Dekker实验室从3C技术延伸开发。具体的实验流程方法原理建议从Job Dekker的几篇文章和综述开始了解： \
 van Berkum NL, Lieberman-Aiden E, Williams L, et al. Hi-C: a method to study the three-dimensional architecture of genomes. J Vis Exp. 2010;(39):1869. doi:10.3791/1869 \
@@ -28,8 +28,8 @@ van Berkum NL, Lieberman-Aiden E, Williams L, et al. Hi-C: a method to study the
 3.使用生物素标记末端标记。\
 4.将连接的DNA纯化后超声打断，并用生物素亲和层析，将生物素化的DNA片段分离，加上接头进行高通量测序。
 ## HiC文库比对
-HiC-Pro是一款高效的Hi-C数据分析软件，提供了从原始数据到归一化之后的HI-C图谱构建的完整功能，运行效率高，用法简便。
-Hi-C标准文库是标准的Chimera结构，在将两端序列进行比对到基因组上时，理论上两侧pairends可以分别比对到基因组的两个座位。\
+	HiC-Pro是一款高效的Hi-C数据分析软件，提供了从原始数据到归一化之后的Hi-C图谱构建的完整功能，运行效率高，用法简便。
+Hi-C标准文库是标准的Chimera结构，在将两端序列进行比对到基因组上时，理论上两侧pairends可以分别比对到基因组的两个位置。\
 由于DNA在碎片化过程中，剪切是随机的，因此酶切位点末端补平形成的junction fragment很可能分布在一侧的reads中，常规的比对分析是很难处理chimera的。\
 在HiC-Pro和HiCUP软件中，他们会去识别理论的junction fragment。如HiC-Pro在比对时先进行Global Mapping，后将unmapping的reads用junction fragment序列进行识别并切割，再进行local mapping，最终将数据进行合并（下图A）。
 ![本地图片](./pics/HicPro_mapping.png)\
