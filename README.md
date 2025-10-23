@@ -39,13 +39,13 @@ van Berkum NL, Lieberman-Aiden E, Williams L, et al. Hi-C: a method to study the
 ## Hi-C数据分析相关的基本概念
 ### 染色质的层级结构
 ![本地图片](./pics/Hic_background.png)\
-研究不同层级结构的互作关系需要不同的分辨率精度。上图示意了不同分辨率分别能反映的互作结构层次。
++ 研究不同层级结构的互作关系需要不同的分辨率精度。上图示意了不同分辨率分别能反映的互作结构层次。
 ### 计数矩阵、热图及分辨率
 ![本地图片](./pics/Hic_contactMat.png)\
-分辨率指的是进行互作关系统计时DNA被分割成的bin的长度。
++ 分辨率指的是进行互作关系统计时DNA被分割成的bin的长度。
 ### cis互作和trans互作
 ![本地图片](./pics/Hic_cisTrans.png)\
-同一条染色质上的互作关系为cis，不同染色质上为trans。
++ 同一条染色质上的互作关系为cis，不同染色质上为trans。
 ## 需要用到的软件概览
 Rawdata:fastq(R1,R2)
 + 1.质控：Trim galore,cutadapt等;
