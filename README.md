@@ -25,10 +25,8 @@ ChIA-PET：该技术将 HiC 与 ChIP-seg 结合，可以检测目的蛋白质的
 ```
 ## HiC技术的大致流程
 + Hi-C是高通量染色体构象捕获（High-throughput Chromosome Conformation Capture, Hi-C）技术的简称，通过高通量测序检测基因组不同位置可能存在的空间互作（contacts），研究全基因组范围内整个染色质DNA在空间位置上的关系。
-+ 由Job Dekker实验室从3C技术延伸开发。具体的实验流程方法原理建议从Job Dekker的几篇文章和综述开始了解： 
-```
-van Berkum NL, Lieberman-Aiden E, Williams L, et al. Hi-C: a method to study the three-dimensional architecture of genomes. J Vis Exp. 2010;(39):1869. doi:10.3791/1869 
-```
++ 由Job Dekker实验室从3C技术延伸开发。具体的实验流程方法原理建议从Job Dekker的几篇文章和综述开始了解\
+*van Berkum NL, Lieberman-Aiden E, Williams L, et al. Hi-C: a method to study the three-dimensional architecture of genomes. J Vis Exp. 2010;(39):1869. doi:10.3791/1869*\
 ![本地图片](./pics/schematic_diagram.png)
 ```
 1.通过甲醛交联固定，将细胞内由蛋白质介导的空间上邻近的染色质片段进行共价连接。
@@ -48,12 +46,14 @@ van Berkum NL, Lieberman-Aiden E, Williams L, et al. Hi-C: a method to study the
 + 同一条染色质上的互作关系为cis，不同染色质上为trans。
 ## 需要用到的软件概览
 Rawdata:fastq(R1,R2)
-+ 1.质控：Trim galore,cutadapt等;
-+ 2.数据预处理（比对及生成互作矩阵）：HiC-Pro;
-+ 3.Call A/B compartments: homer,HiCExplorer等;
-+ 4.Call TADs: Directionality index, Insulation score等;
-+ 5.Call Loops:Fit-Hi-C, Peakachu等;
-+ 6.可视化:Juicebox, HiCPlotter等。
+~~~
+1.质控：Trim galore,cutadapt等;
+2.数据预处理（比对及生成互作矩阵）：HiC-Pro;
+3.Call A/B compartments: homer,HiCExplorer等;
+4.Call TADs: Directionality index, Insulation score等;
+5.Call Loops:Fit-Hi-C, Peakachu等;
+6.可视化:Juicebox, HiCPlotter等。
+~~~
 
 ## HiC文库比对
 + HiC-Pro是一款高效的Hi-C数据分析软件，提供了从原始数据到归一化之后的Hi-C图谱构建的完整功能，运行效率高，用法简便。
