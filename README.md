@@ -1,12 +1,8 @@
 # Code description: This repository contains code from data analysis of Hi-C.
-1.HicPro.md\
-Code contains functions for preprocessing and alignment steps of HiC dataset.\
-2.Compartment.md\
-Dividing the genome into A and B compartments based on the contact matrix. \
-3.TAD.md\
-Identifying topologically associating domains (TADs) from the contact matrix.\
-4.Loop.md\
-Identifying chromatin loops from the contact matrix.\
+1.HicPro.md | *Code contains functions for preprocessing and alignment steps of HiC dataset.*\
+2.Compartment.md | *Dividing the genome into A and B compartments based on the contact matrix.*\
+3.TAD.md | *Identifying topologically associating domains (TADs) from the contact matrix.*\
+4.Loop.md | *Identifying chromatin loops from the contact matrix.*\
 5.Probability.md\
 6.Visualization.md
 ## 目前主流三维基因组测序技术
