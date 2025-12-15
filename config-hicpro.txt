@@ -59,7 +59,7 @@ ALLELE_SPECIFIC_SNP =
 #######################################################################
 
 GENOME_FRAGMENT =/home/share/HiC-Pro-annotations/mm10_HindIII.bed 
-LIGATION_SITE = AAGCTT
+LIGATION_SITE = AAGCTAGCTT
 MIN_FRAG_SIZE = 100
 MAX_FRAG_SIZE = 100000
 MIN_INSERT_SIZE = 100
